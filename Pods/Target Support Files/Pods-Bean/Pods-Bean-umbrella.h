@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_Coffee_LogVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_Coffee_LogVersionString[];
+FOUNDATION_EXPORT double Pods_BeanVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_BeanVersionString[];
 
