@@ -3,20 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D2E55B524EB287900862D83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D2E55B424EB287900862D83 /* GoogleService-Info.plist */; };
 		3D57D30B24C0F5AA00B0FF60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D57D30A24C0F5AA00B0FF60 /* AppDelegate.swift */; };
 		3D57D30D24C0F5AA00B0FF60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D57D30C24C0F5AA00B0FF60 /* SceneDelegate.swift */; };
 		3D57D30F24C0F5AA00B0FF60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D57D30E24C0F5AA00B0FF60 /* ViewController.swift */; };
 		3D57D31224C0F5AA00B0FF60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D57D31024C0F5AA00B0FF60 /* Main.storyboard */; };
 		3D57D31424C0F5AC00B0FF60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D57D31324C0F5AC00B0FF60 /* Assets.xcassets */; };
 		3D57D31724C0F5AC00B0FF60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D57D31524C0F5AC00B0FF60 /* LaunchScreen.storyboard */; };
+		3DAE6E5924EB2E2D00513985 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE6E5824EB2E2D00513985 /* RegisterViewController.swift */; };
+		3DAE6E5B24EB330300513985 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE6E5A24EB330300513985 /* HomeViewController.swift */; };
+		9E4E9FE023849DC69EC124D7 /* Pods_Coffee_Log.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092166894B8F0C66CE21B569 /* Pods_Coffee_Log.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3D57D30724C0F5AA00B0FF60 /* Coffee Log.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coffee Log.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		092166894B8F0C66CE21B569 /* Pods_Coffee_Log.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coffee_Log.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		155588894D01F6A7D6C71C6F /* Pods-Coffee Log.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffee Log.release.xcconfig"; path = "Target Support Files/Pods-Coffee Log/Pods-Coffee Log.release.xcconfig"; sourceTree = "<group>"; };
+		3D2E55B424EB287900862D83 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3D57D30724C0F5AA00B0FF60 /* Bean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D57D30A24C0F5AA00B0FF60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D57D30C24C0F5AA00B0FF60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3D57D30E24C0F5AA00B0FF60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +31,9 @@
 		3D57D31324C0F5AC00B0FF60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D57D31624C0F5AC00B0FF60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D57D31824C0F5AC00B0FF60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DAE6E5824EB2E2D00513985 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		3DAE6E5A24EB330300513985 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B7040DB7DCE49F90C7FF123C /* Pods-Coffee Log.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffee Log.debug.xcconfig"; path = "Target Support Files/Pods-Coffee Log/Pods-Coffee Log.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,24 +41,52 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E4E9FE023849DC69EC124D7 /* Pods_Coffee_Log.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D2E55B124EB27FC00862D83 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3D57D30E24C0F5AA00B0FF60 /* ViewController.swift */,
+				3DAE6E5824EB2E2D00513985 /* RegisterViewController.swift */,
+				3DAE6E5A24EB330300513985 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3D2E55B224EB280600862D83 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3D2E55B324EB282600862D83 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3D57D31024C0F5AA00B0FF60 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3D57D2FE24C0F5AA00B0FF60 = {
 			isa = PBXGroup;
 			children = (
 				3D57D30924C0F5AA00B0FF60 /* Coffee Log */,
 				3D57D30824C0F5AA00B0FF60 /* Products */,
+				6FFF1BC5C8FEEA1B4DDB05BC /* Pods */,
+				5735F1EAD1B37A6B222B6469 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		3D57D30824C0F5AA00B0FF60 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3D57D30724C0F5AA00B0FF60 /* Coffee Log.app */,
+				3D57D30724C0F5AA00B0FF60 /* Bean.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,13 +96,32 @@
 			children = (
 				3D57D30A24C0F5AA00B0FF60 /* AppDelegate.swift */,
 				3D57D30C24C0F5AA00B0FF60 /* SceneDelegate.swift */,
-				3D57D30E24C0F5AA00B0FF60 /* ViewController.swift */,
-				3D57D31024C0F5AA00B0FF60 /* Main.storyboard */,
+				3D2E55B224EB280600862D83 /* Model */,
+				3D2E55B324EB282600862D83 /* View */,
+				3D2E55B124EB27FC00862D83 /* Controller */,
 				3D57D31324C0F5AC00B0FF60 /* Assets.xcassets */,
 				3D57D31524C0F5AC00B0FF60 /* LaunchScreen.storyboard */,
 				3D57D31824C0F5AC00B0FF60 /* Info.plist */,
+				3D2E55B424EB287900862D83 /* GoogleService-Info.plist */,
 			);
 			path = "Coffee Log";
+			sourceTree = "<group>";
+		};
+		5735F1EAD1B37A6B222B6469 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				092166894B8F0C66CE21B569 /* Pods_Coffee_Log.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6FFF1BC5C8FEEA1B4DDB05BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7040DB7DCE49F90C7FF123C /* Pods-Coffee Log.debug.xcconfig */,
+				155588894D01F6A7D6C71C6F /* Pods-Coffee Log.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D57D31B24C0F5AC00B0FF60 /* Build configuration list for PBXNativeTarget "Coffee Log" */;
 			buildPhases = (
+				D9F715E254709B0E582613F2 /* [CP] Check Pods Manifest.lock */,
 				3D57D30324C0F5AA00B0FF60 /* Sources */,
 				3D57D30424C0F5AA00B0FF60 /* Frameworks */,
 				3D57D30524C0F5AA00B0FF60 /* Resources */,
+				CD46A0BB169C5218CD6A88DE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -84,7 +143,7 @@
 			);
 			name = "Coffee Log";
 			productName = "Coffee Log";
-			productReference = 3D57D30724C0F5AA00B0FF60 /* Coffee Log.app */;
+			productReference = 3D57D30724C0F5AA00B0FF60 /* Bean.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -126,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D57D31724C0F5AC00B0FF60 /* LaunchScreen.storyboard in Resources */,
+				3D2E55B524EB287900862D83 /* GoogleService-Info.plist in Resources */,
 				3D57D31424C0F5AC00B0FF60 /* Assets.xcassets in Resources */,
 				3D57D31224C0F5AA00B0FF60 /* Main.storyboard in Resources */,
 			);
@@ -133,14 +193,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CD46A0BB169C5218CD6A88DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coffee Log/Pods-Coffee Log-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coffee Log/Pods-Coffee Log-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Coffee Log/Pods-Coffee Log-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9F715E254709B0E582613F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Coffee Log-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3D57D30324C0F5AA00B0FF60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DAE6E5B24EB330300513985 /* HomeViewController.swift in Sources */,
 				3D57D30F24C0F5AA00B0FF60 /* ViewController.swift in Sources */,
 				3D57D30B24C0F5AA00B0FF60 /* AppDelegate.swift in Sources */,
 				3D57D30D24C0F5AA00B0FF60 /* SceneDelegate.swift in Sources */,
+				3DAE6E5924EB2E2D00513985 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +386,7 @@
 		};
 		3D57D31C24C0F5AC00B0FF60 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7040DB7DCE49F90C7FF123C /* Pods-Coffee Log.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,8 +396,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.williamho.Coffee-Log";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.williamho.Bean;
+				PRODUCT_NAME = Bean;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,6 +405,7 @@
 		};
 		3D57D31D24C0F5AC00B0FF60 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 155588894D01F6A7D6C71C6F /* Pods-Coffee Log.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -309,8 +415,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.williamho.Coffee-Log";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.williamho.Bean;
+				PRODUCT_NAME = Bean;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
