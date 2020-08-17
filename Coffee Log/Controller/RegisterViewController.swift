@@ -15,10 +15,16 @@ class RegisterViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var registerButton: UIButton!
     @IBOutlet var errorLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(animated)
+        self.navigationController!.isNavigationBarHidden = false
+    }
+
 
      @IBAction func registerPressed(_ sender: UIButton) {
         

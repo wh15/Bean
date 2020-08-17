@@ -9,10 +9,15 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(animated)
+        self.navigationController!.isNavigationBarHidden = true
     }
 
 
