@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D23460424EC732B004588E7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D23460324EC732B004588E7 /* LoginViewController.swift */; };
 		3D2E55B524EB287900862D83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D2E55B424EB287900862D83 /* GoogleService-Info.plist */; };
 		3D57D30B24C0F5AA00B0FF60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D57D30A24C0F5AA00B0FF60 /* AppDelegate.swift */; };
 		3D57D30D24C0F5AA00B0FF60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D57D30C24C0F5AA00B0FF60 /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D23460324EC732B004588E7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3D2E55B424EB287900862D83 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3D57D30724C0F5AA00B0FF60 /* Bean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D57D30A24C0F5AA00B0FF60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 				3D57D30E24C0F5AA00B0FF60 /* WelcomeViewController.swift */,
 				3DAE6E5824EB2E2D00513985 /* RegisterViewController.swift */,
 				3DAE6E5A24EB330300513985 /* HomeViewController.swift */,
+				3D23460324EC732B004588E7 /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D23460424EC732B004588E7 /* LoginViewController.swift in Sources */,
 				3DAE6E5B24EB330300513985 /* HomeViewController.swift in Sources */,
 				3D57D30F24C0F5AA00B0FF60 /* WelcomeViewController.swift in Sources */,
 				3D57D30B24C0F5AA00B0FF60 /* AppDelegate.swift in Sources */,

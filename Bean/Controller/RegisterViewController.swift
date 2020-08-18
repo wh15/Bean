@@ -20,29 +20,30 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    // Shows the navigation bar
     override func viewWillAppear(_ animated: Bool) {
          super.viewWillAppear(animated)
         self.navigationController!.isNavigationBarHidden = false
     }
 
-
-     @IBAction func registerPressed(_ sender: UIButton) {
-        
+    
+    // Checks if user password is greater than 6 characters, if so, then creates an account on firebase
+    @IBAction func registerPressed(_ sender: UIButton) {
         if let email  = emailTextField.text, let password = passwordTextField.text {
             if (passwordTextField.text!.count >= 6) {
-        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-            if error != nil {
-                self.errorLabel.text = "Error with registration. Please try again."
+                Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                    if error != nil {
+                        self.errorLabel.text = "Error with registration. Please try again."
+                    } else {
+                        print("success")
+                        // Navigating to the HomeViewController
+                        self.performSegue(withIdentifier: "RegisterToHome", sender: self)
+                    }
+                }
             } else {
-                print("success")
-                // Navigating to the HomeViewController
-                self.performSegue(withIdentifier: "RegisterToHome", sender: self)
+                self.errorLabel.text = "Error: Password must be at least 6 characters."
             }
-            }
-            } else {
-                self.errorLabel.text = "Password must be at least 6 characters."
-            }
+        }
     }
-    }
-
+    
 }
