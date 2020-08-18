@@ -169,21 +169,62 @@
         <!--Home View Controller -->
         <scene sceneID="3a9-j0-GbE">
             <objects>
-                <viewController title="Register View Controller" id="OFl-Nk-T0t" userLabel="Home View Controller " customClass="HomeViewController" customModule="Bean" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home View Controller" id="OFl-Nk-T0t" userLabel="Home View Controller " customClass="HomeViewController" customModule="Bean" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b2e-a8-Oew">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2X9-e0-gej">
-                                <rect key="frame" x="105" y="275" width="72" height="101"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2X9-e0-gej">
+                                <rect key="frame" x="81" y="247" width="107" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="location" catalog="system">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50" scale="large"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rq4-eJ-eDA">
+                                <rect key="frame" x="242" y="247" width="107" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="logCoffeeBrewImage">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50" scale="large"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="is5-fn-ddF">
+                                <rect key="frame" x="81" y="426" width="107" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="logEspressoImage">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50" scale="large"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9d-vv-O8U">
+                                <rect key="frame" x="242" y="426" width="107" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="person" catalog="system">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50" scale="large"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.66985247459999997" green="0.45913527609999999" blue="0.16709004550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="yqT-ES-5dS"/>
                     </view>
                     <navigationItem key="navigationItem" id="eNy-DB-eR1"/>
+                    <connections>
+                        <outlet property="checkInCafeButton" destination="2X9-e0-gej" id="qnc-03-sen"/>
+                        <outlet property="logCoffeeBrewButton" destination="Rq4-eJ-eDA" id="8iw-Fw-A3x"/>
+                        <outlet property="logEspressoButton" destination="is5-fn-ddF" id="DLx-X6-Pxo"/>
+                        <outlet property="profileButton" destination="g9d-vv-O8U" id="oJn-nO-cZw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZFe-mB-lq9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -209,6 +250,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FPj-1K-e4w"/>
+        <segue reference="rvC-Y6-2kX"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="location" catalog="system" width="128" height="115"/>
+        <image name="logCoffeeBrewImage" width="512" height="512"/>
+        <image name="logEspressoImage" width="512" height="512"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+    </resources>
 </document>

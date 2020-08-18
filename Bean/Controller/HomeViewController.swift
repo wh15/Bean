@@ -10,21 +10,31 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet var checkInCafeButton: UIButton!
+    @IBOutlet var logCoffeeBrewButton: UIButton!
+    @IBOutlet var logEspressoButton: UIButton!
+    @IBOutlet var profileButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // Rounded corner edges for buttons
+        checkInCafeButton.layer.cornerRadius = 5
+        checkInCafeButton.layer.borderWidth = 1
+        logCoffeeBrewButton.layer.cornerRadius = 5
+        logCoffeeBrewButton.layer.borderWidth =  1
+        logEspressoButton.layer.cornerRadius = 5
+        logEspressoButton.layer.borderWidth = 1
+        profileButton.layer.cornerRadius = 5
+        profileButton.layer.borderWidth = 1
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // Hides the navigation bar
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController!.isNavigationBarHidden = true
     }
-    */
+    
+    
 
 }
