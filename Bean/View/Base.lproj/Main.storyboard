@@ -264,26 +264,44 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
         </scene>
-        <!--Home View Controller -->
+        <!--Log Coffee Brew View Controller-->
         <scene sceneID="tRC-pD-2U4">
             <objects>
-                <viewController title="Log Coffee Brew Controller" id="7Uf-Np-JEa" userLabel="Home View Controller " customClass="LogCoffeeBrewViewController" customModule="Bean" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Log Coffee Brew Controller" id="7Uf-Np-JEa" userLabel="Log Coffee Brew View Controller" customClass="LogCoffeeBrewViewController" customModule="Bean" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lcp-Pw-46g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w3c-II-lhX">
+                                <rect key="frame" x="168" y="110" width="213" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brew Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJ6-uV-Dq7">
+                                <rect key="frame" x="33" y="117" width="81" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.66985247459999997" green="0.45913527609999999" blue="0.16709004550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="8ZG-rE-hXv"/>
                     </view>
                     <navigationItem key="navigationItem" id="Y7o-ii-iPX"/>
+                    <connections>
+                        <outlet property="brewTypeTextField" destination="w3c-II-lhX" id="Weh-Zq-DeE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lDe-Oq-1bV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6922" y="-200"/>
+            <point key="canvasLocation" x="6921.739130434783" y="-200.22321428571428"/>
         </scene>
-        <!--Home View Controller -->
+        <!--Settings View Controller-->
         <scene sceneID="PnC-BI-0fe">
             <objects>
-                <viewController title="Settings View Controller" id="UtD-2Q-KAy" userLabel="Home View Controller " customClass="SettingsViewController" customModule="Bean" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Settings View Controller" id="UtD-2Q-KAy" userLabel="Settings View Controller" customClass="SettingsViewController" customModule="Bean" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O6A-Dw-Jmf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
