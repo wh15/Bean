@@ -8,5 +8,6 @@ target 'Bean' do
   # Pods for Bean
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'IQKeyboardManagerSwift'
 
 end

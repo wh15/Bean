@@ -35,6 +35,9 @@ class HomeViewController: UIViewController {
         self.navigationController!.isNavigationBarHidden = true
     }
     
+    @IBAction func logCoffeeBrewPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "HomeToLogCoffeeBrew", sender: self)
+    }
     
 
 }

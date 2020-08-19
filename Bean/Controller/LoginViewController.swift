@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
         if let email = emailTextField.text, let password = passwordTextfield.text {
             Auth.auth().signIn(withEmail: email, password: password) {  (user, error) in
                 if error == nil {
-                    self.performSegue(withIdentifier: "loginToHome", sender: self)
+                    self.performSegue(withIdentifier: "LoginToHome", sender: self)
                 } else {
                     self.errorLabel.text = "Please enter a valid email and password."
                 }
