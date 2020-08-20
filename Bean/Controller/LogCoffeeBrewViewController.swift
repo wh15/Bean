@@ -10,9 +10,7 @@ import UIKit
 import Firebase
 
 class LogCoffeeBrewViewController: UIViewController {
-    
-    let db = Firestore.firestore()
-    
+
     @IBOutlet var brewTypeTextField: UITextField!
     @IBOutlet var beanSupplierTextField: UITextField!
     @IBOutlet var beanNameTextField: UITextField!
@@ -22,6 +20,7 @@ class LogCoffeeBrewViewController: UIViewController {
     @IBOutlet var flavourProfileTextField: UITextField!
     @IBOutlet var flavourProfileTableView: UITableView!
     
+    let db = Firestore.firestore()
     let brewTypePicker = UIPickerView()
     var flavours: [String] = []
     
@@ -65,6 +64,13 @@ class LogCoffeeBrewViewController: UIViewController {
     }
     
     @IBAction func logPressed(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Successful", message: "Added to your profile.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: {
+            action in
+            self.navigationController?.popViewController(animated: true)
+        }))
+        
         if let userAccount = Auth.auth().currentUser?.email, let brewType = brewTypeTextField.text, let beanSupplier = beanSupplierTextField.text, let beanName = beanNameTextField.text, let beanWeight = beanWeightTextField.text, let grindSize = grindSizeTextField.text, let waterTemperature = waterTemperatureTextField.text {
             db.collection(K.Collection.logCoffeeBrew).addDocument(data: [K.FStore.userEmail: userAccount,
                                                                          K.LogCoffeeBrew.brewType: brewType,
@@ -74,6 +80,7 @@ class LogCoffeeBrewViewController: UIViewController {
                                                                          K.LogCoffeeBrew.grindSize: grindSize,
                                                                          K.LogCoffeeBrew.waterTemperature: waterTemperature,
                                                                          K.LogCoffeeBrew.flavourProfile: flavours])
+            self.present(alert, animated: true)
         }
     }
 }
