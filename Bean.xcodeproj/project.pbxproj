@@ -11,6 +11,7 @@
 		3D23460624ECA38B004588E7 /* LogCoffeeBrewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D23460524ECA38B004588E7 /* LogCoffeeBrewViewController.swift */; };
 		3D23460824ECC565004588E7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D23460724ECC565004588E7 /* SettingsViewController.swift */; };
 		3D23460E24EF1C93004588E7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D23460D24EF1C93004588E7 /* Constants.swift */; };
+		3D23461124EF28F1004588E7 /* CheckInCafeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D23461024EF28F1004588E7 /* CheckInCafeViewController.swift */; };
 		3D2E55B524EB287900862D83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D2E55B424EB287900862D83 /* GoogleService-Info.plist */; };
 		3D57D30B24C0F5AA00B0FF60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D57D30A24C0F5AA00B0FF60 /* AppDelegate.swift */; };
 		3D57D30D24C0F5AA00B0FF60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D57D30C24C0F5AA00B0FF60 /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 		3D57D31724C0F5AC00B0FF60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D57D31524C0F5AC00B0FF60 /* LaunchScreen.storyboard */; };
 		3DAE6E5924EB2E2D00513985 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE6E5824EB2E2D00513985 /* RegisterViewController.swift */; };
 		3DAE6E5B24EB330300513985 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE6E5A24EB330300513985 /* HomeViewController.swift */; };
+		3DB2C49E24EF34EE004FCEDB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB2C49D24EF34EE004FCEDB /* MapViewController.swift */; };
 		8BE17B4A78842AF74EABE9E0 /* Pods_Bean.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CFD6FC1D5AC287C85A452FE /* Pods_Bean.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,7 @@
 		3D23460524ECA38B004588E7 /* LogCoffeeBrewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCoffeeBrewViewController.swift; sourceTree = "<group>"; };
 		3D23460724ECC565004588E7 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3D23460D24EF1C93004588E7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3D23461024EF28F1004588E7 /* CheckInCafeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInCafeViewController.swift; sourceTree = "<group>"; };
 		3D2E55B424EB287900862D83 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3D57D30724C0F5AA00B0FF60 /* Bean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D57D30A24C0F5AA00B0FF60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +42,7 @@
 		3D57D31824C0F5AC00B0FF60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DAE6E5824EB2E2D00513985 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3DAE6E5A24EB330300513985 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3DB2C49D24EF34EE004FCEDB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		968A3DD9A8CC27BC05F70CD5 /* Pods-Bean.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bean.debug.xcconfig"; path = "Target Support Files/Pods-Bean/Pods-Bean.debug.xcconfig"; sourceTree = "<group>"; };
 		9CFD6FC1D5AC287C85A452FE /* Pods_Bean.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bean.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0816C641763E04C81577FD5 /* Pods-Bean.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bean.release.xcconfig"; path = "Target Support Files/Pods-Bean/Pods-Bean.release.xcconfig"; sourceTree = "<group>"; };
@@ -56,15 +60,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D23460F24EF2820004588E7 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				3DAE6E5824EB2E2D00513985 /* RegisterViewController.swift */,
+				3D23460324EC732B004588E7 /* LoginViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		3D2E55B124EB27FC00862D83 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				3D57D30E24C0F5AA00B0FF60 /* WelcomeViewController.swift */,
-				3DAE6E5824EB2E2D00513985 /* RegisterViewController.swift */,
+				3D23460F24EF2820004588E7 /* Authentication */,
 				3DAE6E5A24EB330300513985 /* HomeViewController.swift */,
-				3D23460324EC732B004588E7 /* LoginViewController.swift */,
-				3D23460524ECA38B004588E7 /* LogCoffeeBrewViewController.swift */,
 				3D23460724ECC565004588E7 /* SettingsViewController.swift */,
+				3D23460524ECA38B004588E7 /* LogCoffeeBrewViewController.swift */,
+				3D23461024EF28F1004588E7 /* CheckInCafeViewController.swift */,
+				3DB2C49D24EF34EE004FCEDB /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -148,6 +162,7 @@
 				3D57D30424C0F5AA00B0FF60 /* Frameworks */,
 				3D57D30524C0F5AA00B0FF60 /* Resources */,
 				E5262DCD514442F250506C22 /* [CP] Embed Pods Frameworks */,
+				A8DFF5AC0BA64C2CB8A3E24A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,6 +221,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		A8DFF5AC0BA64C2CB8A3E24A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bean/Pods-Bean-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bean/Pods-Bean-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bean/Pods-Bean-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E0F854C89688927E2A8A7B86 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -252,7 +284,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DB2C49E24EF34EE004FCEDB /* MapViewController.swift in Sources */,
 				3D23460424EC732B004588E7 /* LoginViewController.swift in Sources */,
+				3D23461124EF28F1004588E7 /* CheckInCafeViewController.swift in Sources */,
 				3DAE6E5B24EB330300513985 /* HomeViewController.swift in Sources */,
 				3D57D30F24C0F5AA00B0FF60 /* WelcomeViewController.swift in Sources */,
 				3D57D30B24C0F5AA00B0FF60 /* AppDelegate.swift in Sources */,

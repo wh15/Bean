@@ -9,18 +9,22 @@
 import UIKit
 import Firebase
 import IQKeyboardManagerSwift
+import GoogleMaps
+
+let googleAPIKey = "AIzaSyDhj9H0XfQViyykSb82-DmtWIgblN8m0xA"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate  {
 
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         FirebaseApp.configure()
-        
-        let db = Firestore.firestore()
-        
+//        let db = Firestore.firestore()
         IQKeyboardManager.shared.enable = true
+        
+        GMSServices.provideAPIKey(googleAPIKey)
+        
         return true
     }
 

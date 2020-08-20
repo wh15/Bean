@@ -9,5 +9,6 @@ target 'Bean' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'IQKeyboardManagerSwift'
+  pod 'GoogleMaps'
 
 end

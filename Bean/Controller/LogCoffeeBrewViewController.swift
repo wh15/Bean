@@ -63,6 +63,7 @@ class LogCoffeeBrewViewController: UIViewController {
         view.endEditing(true)
     }
     
+    // Saves user input to database when button is tapped
     @IBAction func logPressed(_ sender: Any) {
         
         let alert = UIAlertController(title: "Successful", message: "Added to your profile.", preferredStyle: .alert)
