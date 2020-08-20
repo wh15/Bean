@@ -10,6 +10,7 @@
 		3D23460424EC732B004588E7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D23460324EC732B004588E7 /* LoginViewController.swift */; };
 		3D23460624ECA38B004588E7 /* LogCoffeeBrewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D23460524ECA38B004588E7 /* LogCoffeeBrewViewController.swift */; };
 		3D23460824ECC565004588E7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D23460724ECC565004588E7 /* SettingsViewController.swift */; };
+		3D23460E24EF1C93004588E7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D23460D24EF1C93004588E7 /* Constants.swift */; };
 		3D2E55B524EB287900862D83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D2E55B424EB287900862D83 /* GoogleService-Info.plist */; };
 		3D57D30B24C0F5AA00B0FF60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D57D30A24C0F5AA00B0FF60 /* AppDelegate.swift */; };
 		3D57D30D24C0F5AA00B0FF60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D57D30C24C0F5AA00B0FF60 /* SceneDelegate.swift */; };
@@ -26,6 +27,7 @@
 		3D23460324EC732B004588E7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3D23460524ECA38B004588E7 /* LogCoffeeBrewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCoffeeBrewViewController.swift; sourceTree = "<group>"; };
 		3D23460724ECC565004588E7 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		3D23460D24EF1C93004588E7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3D2E55B424EB287900862D83 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3D57D30724C0F5AA00B0FF60 /* Bean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D57D30A24C0F5AA00B0FF60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				3D57D31524C0F5AC00B0FF60 /* LaunchScreen.storyboard */,
 				3D57D31824C0F5AC00B0FF60 /* Info.plist */,
 				3D2E55B424EB287900862D83 /* GoogleService-Info.plist */,
+				3D23460D24EF1C93004588E7 /* Constants.swift */,
 			);
 			path = Bean;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				3D23460624ECA38B004588E7 /* LogCoffeeBrewViewController.swift in Sources */,
 				3DAE6E5924EB2E2D00513985 /* RegisterViewController.swift in Sources */,
 				3D23460824ECC565004588E7 /* SettingsViewController.swift in Sources */,
+				3D23460E24EF1C93004588E7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

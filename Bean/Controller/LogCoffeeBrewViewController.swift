@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Firebase
 
 class LogCoffeeBrewViewController: UIViewController {
+    
+    let db = Firestore.firestore()
     
     @IBOutlet var brewTypeTextField: UITextField!
     @IBOutlet var beanSupplierTextField: UITextField!
@@ -59,6 +62,19 @@ class LogCoffeeBrewViewController: UIViewController {
         // Resets textfield to empty string
         flavourProfileTextField.text = ""
         view.endEditing(true)
+    }
+    
+    @IBAction func logPressed(_ sender: Any) {
+        if let userAccount = Auth.auth().currentUser?.email, let brewType = brewTypeTextField.text, let beanSupplier = beanSupplierTextField.text, let beanName = beanNameTextField.text, let beanWeight = beanWeightTextField.text, let grindSize = grindSizeTextField.text, let waterTemperature = waterTemperatureTextField.text {
+            db.collection(K.Collection.logCoffeeBrew).addDocument(data: [K.FStore.userEmail: userAccount,
+                                                                         K.LogCoffeeBrew.brewType: brewType,
+                                                                         K.LogCoffeeBrew.beanSupplier: beanSupplier,
+                                                                         K.LogCoffeeBrew.beanName: beanName,
+                                                                         K.LogCoffeeBrew.beanWeight: beanWeight,
+                                                                         K.LogCoffeeBrew.grindSize: grindSize,
+                                                                         K.LogCoffeeBrew.waterTemperature: waterTemperature,
+                                                                         K.LogCoffeeBrew.flavourProfile: flavours])
+        }
     }
 }
     
