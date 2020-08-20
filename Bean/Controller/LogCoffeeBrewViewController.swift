@@ -11,6 +11,11 @@ import UIKit
 class LogCoffeeBrewViewController: UIViewController {
     
     @IBOutlet var brewTypeTextField: UITextField!
+    @IBOutlet var beanSupplierTextField: UITextField!
+    @IBOutlet var beanNameTextField: UITextField!
+    @IBOutlet var beanWeightTextField: UITextField!
+    @IBOutlet var grindSizeTextField: UITextField!
+    @IBOutlet var waterTemperatureTextField: UITextField!
     @IBOutlet var flavourProfileTextField: UITextField!
     @IBOutlet var flavourProfileTableView: UITableView!
     
@@ -96,6 +101,7 @@ extension LogCoffeeBrewViewController: UITableViewDelegate, UITableViewDataSourc
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "FlavourCell", for: indexPath)
         cell.textLabel?.text = flavourValue
+        cell.layer.backgroundColor = UIColor.clear.cgColor
         
         return cell
         
