@@ -8,39 +8,61 @@
 
 import UIKit
 
-class LogCoffeeBrewViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-
+class LogCoffeeBrewViewController: UIViewController {
+    
     @IBOutlet var brewTypeTextField: UITextField!
     @IBOutlet var flavourProfileTextField: UITextField!
     @IBOutlet var flavourProfileTableView: UITableView!
     
     let brewTypePicker = UIPickerView()
     var flavours: [String] = []
+    
     // Brew type options
     let brewTypeOptions = ["Pour Over", "French Press", "Aeropress", "Other"]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         brewTypeTextField.inputView = brewTypePicker
         brewTypePicker.delegate = self
         flavourProfileTableView.tableFooterView = UIView(frame: CGRect.zero)
         flavourProfileTableView.delegate = self
-      
+        
     }
     
     // Shows the navigation bar
     override func viewWillAppear(_ animated: Bool) {
-         super.viewWillAppear(animated)
+        super.viewWillAppear(animated)
         self.navigationController!.isNavigationBarHidden = false
     }
-   
+    
+    // When user presses this button, it will add the text in the textfield to the tableview
     @IBAction func addButtonPressed(_ sender: Any) {
         insertNewFlavour()
     }
     
-
+    // Function to add text to tableview
+    func insertNewFlavour() {
+        
+        flavours.append(flavourProfileTextField.text!)
+        
+        let indexPath = IndexPath(row: flavours.count - 1, section: 0)
+        
+        flavourProfileTableView.beginUpdates()
+        flavourProfileTableView.insertRows(at: [indexPath], with: .automatic)
+        flavourProfileTableView.endUpdates()
+        
+        // Resets textfield to empty string
+        flavourProfileTextField.text = ""
+        view.endEditing(true)
+    }
+}
     
-    //MARK: - PickerView for Brew Type
+//MARK: - PickerView for Brew Type
+
+// When user selects Brew Type TextField, a picker view will show up, showcasing various options for the user to select
+extension LogCoffeeBrewViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -48,32 +70,19 @@ class LogCoffeeBrewViewController: UIViewController, UIPickerViewDelegate, UIPic
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return brewTypeOptions.count
     }
-
+    
     func pickerView( _ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-     return brewTypeOptions[row]
+        return brewTypeOptions[row]
     }
-
+    
     func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         brewTypeTextField.text = brewTypeOptions[row]
     }
-    
-    //MARK: - TableView
-    
-    func insertNewFlavour() {
-        
-        flavours.append(flavourProfileTextField.text!)
-
-        let indexPath = IndexPath(row: flavours.count - 1, section: 0)
-
-        flavourProfileTableView.beginUpdates()
-        flavourProfileTableView.insertRows(at: [indexPath], with: .automatic)
-        flavourProfileTableView.endUpdates()
-
-        flavourProfileTextField.text = ""
-        view.endEditing(true)
-        
-    }
 }
+    
+//MARK: - TableView
+
+// Allows users to add and delete text in UITableView
 
 extension LogCoffeeBrewViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -87,7 +96,7 @@ extension LogCoffeeBrewViewController: UITableViewDelegate, UITableViewDataSourc
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "FlavourCell", for: indexPath)
         cell.textLabel?.text = flavourValue
-
+        
         return cell
         
     }
@@ -107,6 +116,4 @@ extension LogCoffeeBrewViewController: UITableViewDelegate, UITableViewDataSourc
             flavourProfileTableView.endUpdates()
         }
     }
-
-    
 }
