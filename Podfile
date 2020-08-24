@@ -10,5 +10,6 @@ target 'Bean' do
   pod 'Firebase/Firestore'
   pod 'IQKeyboardManagerSwift'
   pod 'GoogleMaps'
+  pod 'GooglePlaces'
 
 end

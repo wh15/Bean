@@ -22,6 +22,7 @@
 		3DAE6E5924EB2E2D00513985 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE6E5824EB2E2D00513985 /* RegisterViewController.swift */; };
 		3DAE6E5B24EB330300513985 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE6E5A24EB330300513985 /* HomeViewController.swift */; };
 		3DB2C49E24EF34EE004FCEDB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB2C49D24EF34EE004FCEDB /* MapViewController.swift */; };
+		3DBEE6C424F46BE300B02327 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEE6C324F46BE300B02327 /* config.swift */; };
 		8BE17B4A78842AF74EABE9E0 /* Pods_Bean.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CFD6FC1D5AC287C85A452FE /* Pods_Bean.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		3DAE6E5824EB2E2D00513985 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3DAE6E5A24EB330300513985 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3DB2C49D24EF34EE004FCEDB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		3DBEE6C324F46BE300B02327 /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		968A3DD9A8CC27BC05F70CD5 /* Pods-Bean.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bean.debug.xcconfig"; path = "Target Support Files/Pods-Bean/Pods-Bean.debug.xcconfig"; sourceTree = "<group>"; };
 		9CFD6FC1D5AC287C85A452FE /* Pods_Bean.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bean.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0816C641763E04C81577FD5 /* Pods-Bean.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bean.release.xcconfig"; path = "Target Support Files/Pods-Bean/Pods-Bean.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				3D57D31824C0F5AC00B0FF60 /* Info.plist */,
 				3D2E55B424EB287900862D83 /* GoogleService-Info.plist */,
 				3D23460D24EF1C93004588E7 /* Constants.swift */,
+				3DBEE6C324F46BE300B02327 /* config.swift */,
 			);
 			path = Bean;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				3D57D30D24C0F5AA00B0FF60 /* SceneDelegate.swift in Sources */,
 				3D23460624ECA38B004588E7 /* LogCoffeeBrewViewController.swift in Sources */,
 				3DAE6E5924EB2E2D00513985 /* RegisterViewController.swift in Sources */,
+				3DBEE6C424F46BE300B02327 /* config.swift in Sources */,
 				3D23460824ECC565004588E7 /* SettingsViewController.swift in Sources */,
 				3D23460E24EF1C93004588E7 /* Constants.swift in Sources */,
 			);

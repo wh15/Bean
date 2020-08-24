@@ -11,7 +11,7 @@ import Firebase
 import IQKeyboardManagerSwift
 import GoogleMaps
 
-let googleAPIKey = "AIzaSyDhj9H0XfQViyykSb82-DmtWIgblN8m0xA"
+let googleAPIKey = api_key
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate  {
