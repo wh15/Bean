@@ -66,23 +66,48 @@ class CheckInCafeViewController: UIViewController {
         
 
         
-        let testURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(currentLoc.coordinate.latitude),\(currentLoc.coordinate.longitude)&radius=1000&type=cafe&key=\(api_key)"
+        let testURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(currentLoc.coordinate.latitude),\(currentLoc.coordinate.longitude)&radius=2000&type=cafe&key=\(api_key)"
 
+        print(testURL)
         
-        
-        if let url = URL(string: testURL
-            ) {
-            URLSession.shared.dataTask(with: url) { data, response, error in
-               if let data = data {
-                  if let jsonString = String(data: data, encoding: .utf8) {
-                     print(jsonString)
-                  }
-                }
-            }.resume()
-        
-    }
+        if let url = URL(string: testURL) {
+        let session = URLSession(configuration: .default)
+        let task = session.dataTask(with: url) { (data, response, error) in
+            if error != nil {
+                print(error!)
+                return
+            }
+            if let safeData = data {
+                self.parseJSON(placesData: safeData)
+            }
+            }
+            task.resume()
+            
+        }
+
+//        if let url = URL(string: testURL
+//            ) {
+//            URLSession.shared.dataTask(with: url) { data, response, error in
+//               if let data = data {
+//                  if let jsonString = String(data: data, encoding: .utf8) {
+//                     print(jsonString)
+//                  }
+//                }
+//            }.resume()
+//
+//    }
     
 }
+    
+    func parseJSON(placesData: Data){
+        let decoder = JSONDecoder()
+        do {
+            let decodedData = try decoder.decode(PlacesData.self, from: placesData)
+            print(decodedData.results)
+        } catch {
+            print(error)
+        }
+    }
 
 }
 
