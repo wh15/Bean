@@ -10,6 +10,9 @@ import UIKit
 import Firebase
 import IQKeyboardManagerSwift
 import GoogleMaps
+import GooglePlaces
+import FirebaseAuth
+import FirebaseCore
 
 let googleAPIKey = api_key
 
@@ -24,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate  {
         IQKeyboardManager.shared.enable = true
         
         GMSServices.provideAPIKey(googleAPIKey)
+        GMSPlacesClient.provideAPIKey(googleAPIKey)
+        
         
         return true
     }
