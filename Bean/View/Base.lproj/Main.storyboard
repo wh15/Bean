@@ -529,7 +529,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orT-fA-FNH">
-                                <rect key="frame" x="189" y="182" width="37" height="34"/>
+                                <rect key="frame" x="330" y="771" width="37" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="location" catalog="system">
@@ -539,12 +539,33 @@
                                     <action selector="locationPressed:" destination="wDZ-HC-j6F" eventType="touchUpInside" id="wVS-1k-E7m"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="edG-Mc-1MP">
+                                <rect key="frame" x="0.0" y="163" width="414" height="223"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCafeCell" rowHeight="64" id="Vu9-tY-wTr">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vu9-tY-wTr" id="Sn4-ZG-F1q">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.66985247459999997" green="0.45913527609999999" blue="0.16709004550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="edG-Mc-1MP" firstAttribute="trailing" secondItem="dKk-9d-1Bc" secondAttribute="trailing" id="Ibj-FS-07f"/>
+                            <constraint firstItem="dKk-9d-1Bc" firstAttribute="bottom" secondItem="edG-Mc-1MP" secondAttribute="bottom" constant="476" id="c8v-dv-Rn6"/>
+                            <constraint firstItem="edG-Mc-1MP" firstAttribute="top" secondItem="dKk-9d-1Bc" secondAttribute="top" constant="75" id="jzu-yV-bst"/>
+                            <constraint firstItem="edG-Mc-1MP" firstAttribute="leading" secondItem="dKk-9d-1Bc" secondAttribute="leading" id="uYC-mr-5pd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dKk-9d-1Bc"/>
                     </view>
                     <navigationItem key="navigationItem" id="NOp-5t-sCO"/>
                     <connections>
+                        <outlet property="tableView" destination="edG-Mc-1MP" id="NeH-UL-2bp"/>
                         <segue destination="PO5-nR-IW4" kind="show" identifier="CheckInCafeToMaps" id="ahj-4A-mnK"/>
                     </connections>
                 </viewController>

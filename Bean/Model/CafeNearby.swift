@@ -1,18 +1,14 @@
 //
-//  PlacesData.swift
+//  CafeNearby.swift
 //  Bean
 //
-//  Created by William Ho on 2020-08-25.
+//  Created by William Ho on 2020-08-26.
 //  Copyright © 2020 William Ho. All rights reserved.
 //
 
 import Foundation
 
-struct PlacesData: Decodable {
-    let results: [Results]
-}
-
-struct Results: Decodable {
+struct CafeNearby {
     let name: String
     let rating: Double
     let vicinity: String

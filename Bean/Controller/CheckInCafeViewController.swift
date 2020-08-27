@@ -12,6 +12,8 @@ import CoreLocation
 
 class CheckInCafeViewController: UIViewController {
     
+    @IBOutlet var tableView: UITableView!
+    
     var resultsViewController: GMSAutocompleteResultsViewController?
     
     var searchController: UISearchController?
@@ -20,6 +22,10 @@ class CheckInCafeViewController: UIViewController {
     
     var locationManager = CLLocationManager()
 
+    var cafeNearby: [CafeNearby] = [
+        CafeNearby(name: "Test", rating: 3.4, vicinity: "test"),
+        CafeNearby(name: "test1", rating: 3.2, vicinity: "test2")
+    ]
 
     @IBOutlet var searchBar: UISearchBar!
     var currentLoc: CLLocation!
@@ -27,6 +33,10 @@ class CheckInCafeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        tableView.register(UINib(nibName: "CafeNearbyCell", bundle: nil), forCellReuseIdentifier: "ReusableCafeCell")
         
            resultsViewController = GMSAutocompleteResultsViewController()
            resultsViewController?.delegate = self
@@ -85,18 +95,6 @@ class CheckInCafeViewController: UIViewController {
             
         }
 
-//        if let url = URL(string: testURL
-//            ) {
-//            URLSession.shared.dataTask(with: url) { data, response, error in
-//               if let data = data {
-//                  if let jsonString = String(data: data, encoding: .utf8) {
-//                     print(jsonString)
-//                  }
-//                }
-//            }.resume()
-//
-//    }
-    
 }
     
     func parseJSON(placesData: Data){
@@ -104,6 +102,9 @@ class CheckInCafeViewController: UIViewController {
         do {
             let decodedData = try decoder.decode(PlacesData.self, from: placesData)
             print(decodedData.results)
+            for i in 0...decodedData.results.count - 1 {
+                print("Name: " + decodedData.results[i].name)
+            }
         } catch {
             print(error)
         }
@@ -126,5 +127,28 @@ extension CheckInCafeViewController: GMSAutocompleteResultsViewControllerDelegat
     func resultsController(_ resultsController: GMSAutocompleteResultsViewController, didFailAutocompleteWithError error: Error) {
             // TODO: handle the error.
         print("Error: ", error.localizedDescription)
+    }
+}
+
+extension CheckInCafeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cafeNearby.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCafeCell", for: indexPath) as! CafeNearbyCell
+        cell.cafeNameLabel.text = cafeNearby[indexPath.row].name
+        cell.cafeRatingLabel.text = String(cafeNearby[indexPath.row].rating)
+        cell.cafeAddressLabel.text = cafeNearby[indexPath.row].vicinity
+
+        return cell
+    }
+    
+    
+}
+
+extension CheckInCafeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
     }
 }
