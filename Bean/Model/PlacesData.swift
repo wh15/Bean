@@ -16,4 +16,7 @@ struct Results: Decodable {
     let name: String
     let rating: Double
     let vicinity: String
+    let place_id: String
 }
+
+

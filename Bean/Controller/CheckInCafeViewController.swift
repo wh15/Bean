@@ -22,10 +22,7 @@ class CheckInCafeViewController: UIViewController {
     
     var locationManager = CLLocationManager()
 
-    var cafeNearby: [CafeNearby] = [
-        CafeNearby(name: "Test", rating: 3.4, vicinity: "test"),
-        CafeNearby(name: "test1", rating: 3.2, vicinity: "test2")
-    ]
+    var cafeNearby: [CafeNearby] = []
 
     @IBOutlet var searchBar: UISearchBar!
     var currentLoc: CLLocation!
@@ -33,11 +30,68 @@ class CheckInCafeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.requestWhenInUseAuthorization()
+        currentLoc = locationManager.location
+        setupNearbyCafes()
+
+        
+        setupAutoComplete()
+        setupTableView()
+        
+        tableView?.reloadData()
+        
+    }
+    
+    // Shows the navigation bar
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController!.isNavigationBarHidden = false
+
+    }
+    
+    func setupNearbyCafes() {
+        
+        let apiURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(currentLoc.coordinate.latitude),\(currentLoc.coordinate.longitude)&radius=2000&type=cafe&key=\(api_key)"
+
+
+        if let url = URL(string: apiURL) {
+        let session = URLSession(configuration: .default)
+        let task = session.dataTask(with: url) { (data, response, error) in
+            if error != nil {
+                print(error!)
+                return
+            }
+            if let safeData = data {
+               let decodedData = self.parseJSON(placesData: safeData)
+                if ((decodedData?.results.count)! > 3) {
+                    for i in 0...2 {
+                        self.cafeNearby.append(CafeNearby(name: decodedData?.results[i].name ?? "error" , rating: decodedData?.results[i].rating ?? 0, vicinity: decodedData?.results[i].vicinity ?? "error"))
+                    }
+                } else if ((decodedData?.results.count)! > 0) {
+                    for i in 0...decodedData!.results.count {
+                        self.cafeNearby.append(CafeNearby(name: decodedData?.results[i].name ?? "error" , rating: decodedData?.results[i].rating ?? 0, vicinity: decodedData?.results[i].vicinity ?? "error"))
+                    }
+                } else {
+                    self.cafeNearby.append(CafeNearby(name: "No Nearby Cafes", rating: 0, vicinity: ""))
+                }
+
+
+            }
+            }
+            task.resume()
+            
+        }
+        
+    }
+    
+    func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
         
         tableView.register(UINib(nibName: "CafeNearbyCell", bundle: nil), forCellReuseIdentifier: "ReusableCafeCell")
-        
+    }
+    
+    func setupAutoComplete() {
            resultsViewController = GMSAutocompleteResultsViewController()
            resultsViewController?.delegate = self
            
@@ -56,57 +110,17 @@ class CheckInCafeViewController: UIViewController {
            // When UISearchController presents the results view, present it in
            // this view controller, not one further up the chain.
            definesPresentationContext = true
-        
-
-
-        locationManager.requestWhenInUseAuthorization()
-        currentLoc = locationManager.location
-
     }
     
-    // Shows the navigation bar
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController!.isNavigationBarHidden = false
-        
-
-    }
-    
-    @IBAction func locationPressed(_ sender: Any) {
-        
-
-        
-        let testURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(currentLoc.coordinate.latitude),\(currentLoc.coordinate.longitude)&radius=2000&type=cafe&key=\(api_key)"
-
-        print(testURL)
-        
-        if let url = URL(string: testURL) {
-        let session = URLSession(configuration: .default)
-        let task = session.dataTask(with: url) { (data, response, error) in
-            if error != nil {
-                print(error!)
-                return
-            }
-            if let safeData = data {
-                self.parseJSON(placesData: safeData)
-            }
-            }
-            task.resume()
-            
-        }
-
-}
-    
-    func parseJSON(placesData: Data){
+    func parseJSON(placesData: Data) -> PlacesData? {
         let decoder = JSONDecoder()
+        
         do {
             let decodedData = try decoder.decode(PlacesData.self, from: placesData)
-            print(decodedData.results)
-            for i in 0...decodedData.results.count - 1 {
-                print("Name: " + decodedData.results[i].name)
-            }
+            return decodedData
         } catch {
             print(error)
+            return nil
         }
     }
 
@@ -140,7 +154,6 @@ extension CheckInCafeViewController: UITableViewDataSource {
         cell.cafeNameLabel.text = cafeNearby[indexPath.row].name
         cell.cafeRatingLabel.text = String(cafeNearby[indexPath.row].rating)
         cell.cafeAddressLabel.text = cafeNearby[indexPath.row].vicinity
-
         return cell
     }
     
