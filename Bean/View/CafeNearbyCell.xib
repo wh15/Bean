@@ -44,11 +44,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </stackView>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="PUg-Qk-AxS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="1" id="0Jx-2p-nRJ"/>
                     <constraint firstItem="PUg-Qk-AxS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="I5B-kv-8Sv"/>
@@ -56,6 +58,7 @@
                     <constraint firstAttribute="bottom" secondItem="PUg-Qk-AxS" secondAttribute="bottom" constant="-1" id="qy1-7Z-h0U"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="cafeAddressLabel" destination="EPg-gL-rZf" id="i3Y-zo-IMu"/>

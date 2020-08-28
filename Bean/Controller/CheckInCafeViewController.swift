@@ -12,6 +12,9 @@ import CoreLocation
 
 class CheckInCafeViewController: UIViewController {
     
+    @IBOutlet var currentCafeName: UILabel!
+    @IBOutlet var currentCafeAddress: UITextField!
+    
     @IBOutlet var tableView: UITableView!
     
     var resultsViewController: GMSAutocompleteResultsViewController?
@@ -163,5 +166,7 @@ extension CheckInCafeViewController: UITableViewDataSource {
 extension CheckInCafeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
+        currentCafeName.text = cafeNearby[indexPath.row].name
+        currentCafeAddress.text = cafeNearby[indexPath.row].vicinity
     }
 }
