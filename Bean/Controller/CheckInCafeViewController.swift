@@ -133,6 +133,9 @@ extension CheckInCafeViewController: GMSAutocompleteResultsViewControllerDelegat
     
     func resultsController(_ resultsController: GMSAutocompleteResultsViewController, didAutocompleteWith place: GMSPlace) {
            searchController?.isActive = false
+        
+        currentCafeName.text = place.name
+        currentCafeAddress.text = place.formattedAddress
          // Do something with the selected place.
          print("Place name: \(place.name)")
          print("Place address: \(place.formattedAddress)")
